@@ -87,7 +87,7 @@ def createDatasetFromFiles(directory = u'./dataClean/', id = -1):
                             
                             #range on each axis
                             min_ts1 = np.min(ts1)
-                            max_ts1 = np.max(ts2)
+                            max_ts1 = np.max(ts1)
                             r = max_ts1-min_ts1
                             
                             #Moments on each axis
