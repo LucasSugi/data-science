@@ -1,0 +1,27 @@
+.div_wiki {
+	width: 100%;
+	padding-bottom: 10px;
+	background-color: white;
+	margin-top: 10px;
+	border-radius: 10px;
+	font-family: Helvetica;
+	text-align: justify;
+}
+
+.div_wiki h1{
+	padding-left: 15px;
+	padding-top: 10px;
+}
+
+.div_wiki ul{
+	padding-right: 15px;
+	list-style-type: none;
+}
+
+.div_wiki p{
+	padding-bottom: 15px;
+}
+
+.div_wiki li{
+	padding-bottom: 5px;
+}

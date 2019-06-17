@@ -1,0 +1,78 @@
+#score {
+	width: 30%;
+	height: 350px;
+	padding-top: 5px;
+	margin-right: 2%;
+	background-color: white;
+	border-radius: 10px;	
+	text-align: center;
+	float:left;
+}
+
+#features {
+	width: 68%;
+	height: 350px;
+	background-color: white;
+	border-radius: 10px;
+	text-align: center;
+	float: left;
+}
+
+#radarChart1 {
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+
+#radarChart2 {
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+
+#radarChart3 {
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+
+#radarChart4 {
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+
+#dispersion {
+	width: 100%;
+	height: 350px;
+	margin-top: 10px;
+	padding-top: 5px;
+	background-color: white;
+	border-radius: 10px;
+	text-align: center;
+	float: left;
+}
+
+span {
+	font-family: Helvetica;
+	font-size: 15px;
+	margin-left: -50px;
+	margin-right: 10px;
+}
+
+#title_radarChart {
+	font-family: Helvetica;
+	font-size: 18px;
+	margin-bottom: -10px;
+}
+
+#display {
+	width: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#n_clusters {
+	width: 50px;
+	margin-right: 10px;
+}

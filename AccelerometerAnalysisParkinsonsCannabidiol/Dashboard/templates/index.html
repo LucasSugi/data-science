@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Dashboard - Parkinson</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename='script/score.js') }}"></script>
+	<script src="{{ url_for('static', filename='script/scatterplot_1.js') }}"></script>
+	<script src="{{ url_for('static', filename='script/scatterplot_2.js') }}"></script>
+	<script src="{{ url_for('static', filename='script/scatterplot_3.js') }}"></script>
+	<script src="{{ url_for('static', filename='script/color_scatterplot.js') }}"></script>
+	<script src="{{ url_for('static', filename='script/radarChart.js') }}"></script>
+	<script src="{{ url_for('static', filename='script/drawRadarChart.js') }}"></script>
+	<script src="{{ url_for('static', filename='script/cluster.js') }}"></script>
+	<script src="{{ url_for('static', filename='script/change_cluster.js') }}"></script>
+
+</head>
+<body>
+	<header id='header'>
+		<h1 id='title'>Pessoas com Doença de Parkinson (PDP) sobre o Efeito do Canabidiol</h1>
+		<ul id='navigation'>
+			<li class='nav_list'>
+				<a href="/">Home</a>
+			</li>
+			<li class='nav_list'>
+				<a href="/wiki">Wiki</a>
+			</li>
+		</ul>
+	</header>
+
+	<div id='score'></div>
+	<div id='features'>
+		<p id='title_radarChart'>Radar Chart das Características</p>
+		<div id='radarChart1'></div>
+		<div id='radarChart2'></div>
+		<div id='radarChart3'></div>
+		<div id='radarChart4'></div>
+	</div>
+	<div id='dispersion'></div>
+
+	<footer>
+		<a href="https://www.linkedin.com/in/lucas-sugi/"><img src="{{ url_for('static', filename='img/linkedin.png') }}" alt="Linkedin Icon" width="30" height="30"></a>
+		<a href="https://github.com/LucasSugi/data-science/tree/master/AccelerometerAnalysisParkinsonsCannabidiol"><img src="{{ url_for('static', filename='img/github.png') }}" alt="Github Icon" width="30" height="30"></a>
+		<p>lucas.sugi@usp.br</p>
+	</footer>
+
+	<script type="text/javascript">
+
+	// Desenhando score
+	score();
+
+	// Leitura das variaveis
+	var dataset_x = d3.csv("{{ url_for('static', filename='data/parkinson_clustering.csv') }}");
+
+	// Desenhando radarChart
+	radarChart(dataset_x,2);
+
+	// Desenhnando scatterplot 1
+	scatterplot_1(dataset_x);	
+
+	// Desenhnando scatterplot 2
+	scatterplot_2(dataset_x);
+
+	// Desenhnando scatterplot 2
+	scatterplot_3(dataset_x);
+
+	// Leitura do target
+	var dataset_y = d3.csv("{{ url_for('static', filename='data/target1.csv') }}");
+
+	// Colorindo scatterplot
+	color_scatterplot(dataset_y,2);
+
+	</script>	
+</body>
+</html>

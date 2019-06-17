@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard - Parkinson</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/wiki.css') }}">
+</head>
+<body>
+	<header id='header'>
+		<h1 id='title'>Pessoas com Doença de Parkinson (PDP) sobre o Efeito do Canabidiol</h1>
+		<ul id='navigation'>
+			<li class='nav_list'>
+				<a href="/">Home</a>
+			</li>
+			<li class='nav_list'>
+				<a href="/wiki">Wiki</a>
+			</li>
+		</ul>
+	</header>
+
+	<div class='div_wiki'>
+		<h1>Experimento</h1>
+		<ul>
+			<p>Os dados desse projeto forma obtidos por meio de um experimento realizado na Universidade Federal de São Carlos na qual os pacientes possuíam a doença de Parkinson e foram submetidos ao Canabidiol em um teste de ansiedade. Para analisar os efeitos da droga um acelerômetro foi acoplado em cada um deles sendo obtido séries temporais após o experimento.</p>
+		</ul>
+	</div>
+
+	<div class='div_wiki'>
+		<h1>Atributos</h1>
+		<ul>
+			<p>A interpretação e explicação de cada atributo é dada a seguir:</p>
+			<li><i>Power Spectrum Entropy (PSE):</i> seria uma indicação do quão suave é o movimento. Assim, valores menores na entropia indicam um sistema que é dominado por amplitudes parecidas, logo, movimentos mais suaves. De forma contrária, entropias maiores indicam sistemas com muitas amplitudes diferentes, logo, movimentos menos suaves.</li>
+			<li><i>Power Spectrum Peak (PSP):</i> seria uma indicação de regularidade das ações, por caracterizar as amplitudes do movimento. Assim, valores grandes indicam uma maior regularidade.</li>
+			<li><i>Power Spectrum Peak Frequency (PSPF):</i> seria uma caracterização do tremor, sendo que valores maiores indicam variação maiores.</li>
+		</ul>
+	</div>
+
+	<div class='div_wiki'>
+		<h1>Score</h1>
+		<ul>
+			<p>O Score é uma forma interativa que pode ser utilizada para verificar qual o grupo que um paciente irá pertencer estando sobre o efeito do Canabidiol, sendo apenas necessário entrar com o arquivo csv contendo as séries temporais. Por meio dele também é possível modificar o número de clusters para gerar interpretações diferentes.</p>
+		</ul>
+	</div>
+
+	<div class='div_wiki'>
+		<h1>Arquivo</h1>
+		<ul>
+			<p>O arquivo de entrada aceito é no formato csv na qual os valores da aceleração nos eixos x,y,z estão separados por vírgula.</p>
+		</ul>
+	</div>
+
+	<footer>
+		<a href="https://www.linkedin.com/in/lucas-sugi/"><img src="{{ url_for('static', filename='img/linkedin.png') }}" alt="Linkedin Icon" width="30" height="30"></a>
+		<a href="https://github.com/LucasSugi/data-science/tree/master/AccelerometerAnalysisParkinsonsCannabidiol"><img src="{{ url_for('static', filename='img/github.png') }}" alt="Github Icon" width="30" height="30"></a>
+		<p>lucas.sugi@usp.br</p>
+	</footer>
+
+</body>
+</html>	
