@@ -56,7 +56,7 @@
 	score();
 
 	// Leitura das variaveis
-	var dataset_x = d3.csv("{{ url_for('static', filename='data/parkinson_clustering.csv') }}");
+	var dataset_x = d3.csv("https://raw.githubusercontent.com/LucasSugi/data-science/master/AccelerometerAnalysisParkinsonsCannabidiol/Data/parkinson_clustering.csv");
 
 	// Desenhando radarChart
 	radarChart(dataset_x,2);
@@ -71,7 +71,7 @@
 	scatterplot_3(dataset_x);
 
 	// Leitura do target
-	var dataset_y = d3.csv("{{ url_for('static', filename='data/target1.csv') }}");
+	var dataset_y = d3.csv("https://raw.githubusercontent.com/LucasSugi/data-science/master/AccelerometerAnalysisParkinsonsCannabidiol/Data/target1.csv");
 
 	// Colorindo scatterplot
 	color_scatterplot(dataset_y,2);
